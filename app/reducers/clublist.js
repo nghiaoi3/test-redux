@@ -16,9 +16,6 @@ switch (action.type) {
           error: true
         };
       }
-      
-
-
           return {
         ...state,
         data: action.payload.data, //res.json(businesses)

@@ -10048,6 +10048,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
   __WEBPACK_IMPORTED_MODULE_3_react_redux__["a" /* Provider */],
   { store: __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */] },
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    'p',
+    null,
+    'hiiii'
+  ),
   __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Main_js__["a" /* default */], null)
 ), document.getElementById('root'));
 
@@ -28428,7 +28433,6 @@ var searchReducer = (state = defaultState, action) => {
           error: true
         });
       }
-
       return _extends({}, state, {
         data: action.payload.data, //res.json(businesses)
         loading: false,
