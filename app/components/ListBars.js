@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 
 var mapStateToProps = state => ({
-  data: state.data.businesses,
+  data: state.data,
 });
 
 
@@ -13,7 +13,7 @@ class ListBars extends React.Component {
     
 var data = this.props.data;
     
-    return (   <table>    {data.map(business => {
+    return (   <table>    {data.businesses.map(business => {
   <tr>
     <td key={business.name}>{business.name}</td>
     <td key={business.address}>{business.address}</td>

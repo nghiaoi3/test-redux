@@ -28454,7 +28454,7 @@ var searchReducer = (state = defaultState, action) => {
 
 
 var mapStateToProps = state => ({
-  data: state.data.businesses
+  data: state.data
 });
 
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
@@ -28467,7 +28467,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       "table",
       null,
       "    ",
-      data.map(business => {
+      data.businesses.map(business => {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "tr",
           null,
