@@ -11920,11 +11920,25 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  __WEBPACK_IMPORTED_MODULE_3_react_redux__["a" /* Provider */],
-  { store: __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */] },
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Main_js__["a" /* default */], null)
-), document.getElementById('root'));
+/*
+ReactDOM.render(
+
+  <Provider store={store}>
+    <Main/>
+  </Provider>,
+  document.getElementById('root')
+);*/
+
+var render = () => {
+  __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    __WEBPACK_IMPORTED_MODULE_3_react_redux__["a" /* Provider */],
+    { store: __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */] },
+    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Main_js__["a" /* default */], null)
+  ), document.getElementById('root'));
+};
+
+__WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */].subscribe(render);
+render();
 
 /***/ }),
 /* 115 */
@@ -25259,8 +25273,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           null,
           "Search"
         )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ListBars_js__["a" /* default */], null)
+      )
     );
   }
 
@@ -28417,7 +28430,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
+/* unused harmony default export */ var _unused_webpack_default_export = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
   return { data: state.clublist.data };
 })(ListBars));
 
@@ -28463,6 +28476,10 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
 
 var store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["b" /* createStore */])(__WEBPACK_IMPORTED_MODULE_1__reducers_clublist__["a" /* default */]);
+
+store.subscribe(() => {
+  console.log(store.getState().lastAction);
+});
 
 /* harmony default export */ __webpack_exports__["a"] = (store);
 
