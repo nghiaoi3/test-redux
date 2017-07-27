@@ -7,8 +7,11 @@ class ListBars extends React.Component {
         
   render() {
     
+    
 var {data} = this.props;
-
+   if (this.props.data.length === 0) {
+      return <div />;
+    }
     return (   <table>   {data.businesses.map(business => {
   <tr>
     <td key={business.name}>{business.name}</td>
