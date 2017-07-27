@@ -41,6 +41,7 @@ class Main extends React.Component {
         <br/><br/>
         <button>Search</button>
       </form>
+      <ListBars/>
                  </div>
 
     )
