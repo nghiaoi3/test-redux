@@ -28447,10 +28447,6 @@ var defaultState = { data: [] };
 
 
 
-const mapStateToProps = state => ({
-  data: state.clublist.data // get state of data of reducer clublist
-});
-
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
@@ -28460,8 +28456,8 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "table",
       null,
-      "    ",
-      data.map(business => {
+      "   ",
+      data.businesses.map(business => {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "tr",
           null,
@@ -28481,7 +28477,9 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(mapStateToProps)(ListBars));
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
+  return { data: state.data };
+})(ListBars));
 
 /*
 <Container className="club-list">

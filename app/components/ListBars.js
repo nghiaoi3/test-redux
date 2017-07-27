@@ -2,18 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 
 
-const mapStateToProps = state => ({
-  data: state.clublist.data, // get state of data of reducer clublist
-});
-
-
 class ListBars extends React.Component {
         
   render() {
     
 var {data} = this.props;
     
-    return (   <table>    {data.map(business => {
+    return (   <table>   {data.businesses.map(business => {
   <tr>
     <td key={business.name}>{business.name}</td>
     <td key={business.address}>{business.address}</td>
@@ -26,10 +21,9 @@ var {data} = this.props;
 }
 
 
-export default connect(mapStateToProps)(ListBars);
-
-
-
+export default connect(function(state){
+  return {data: state.data}
+})(ListBars);
 
 
         /*

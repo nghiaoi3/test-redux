@@ -4,7 +4,7 @@ import { SEARCH} from "../components/action";
 var defaultState = {  data: []};
 
 
-export default (state = defaultState, action) => {
+export default  (state = defaultState, action) => {
 switch (action.type) {
     case SEARCH:
 
