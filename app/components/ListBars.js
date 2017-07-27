@@ -10,9 +10,7 @@ var mapStateToProps = state => ({
 class ListBars extends React.Component {
         
   render() {
-    if (this.props.data.length === 0) {
-      return <div />;
-    }
+    
 var data = this.props.data;
     if (data.length === 0) {
       return <div />;
