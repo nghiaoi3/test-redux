@@ -5,7 +5,7 @@ class ListBars extends React.Component {
     
   render() {
 var {data} = this.props;
-
+console.log('data is '+data)
     if (data.length === 0) {
       return <div />;
     }
