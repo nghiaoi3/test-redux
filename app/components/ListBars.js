@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 
 const mapStateToProps = state => ({
-  data: state.data.businesses,
+  data: state.clublist.data, // get state of data of reducer clublist
 });
 
 
