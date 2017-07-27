@@ -25208,7 +25208,7 @@ const SEARCH = "SEARCH";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_action__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ListBars__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ListBars_js__ = __webpack_require__(280);
 
 
 
@@ -25255,7 +25255,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           "Search"
         )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ListBars__["ListBars"], null)
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ListBars_js__["a" /* default */], null)
     );
   }
 
@@ -28432,10 +28432,7 @@ var searchReducer = (state = { data: [] }, action) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(200);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(200);
 
 
 
@@ -28470,8 +28467,8 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-ListBars = Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])()(ListBars);
-/* unused harmony default export */ var _unused_webpack_default_export = (ListBars);
+ListBars = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])()(ListBars);
+/* harmony default export */ __webpack_exports__["a"] = (ListBars);
 
 /*
 <Container className="club-list">
