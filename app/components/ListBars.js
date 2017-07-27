@@ -7,7 +7,6 @@ class ListBars extends React.Component {
         
   render() {
     
-    
 var {data} = this.props;
 console.log('data '+data)
 
@@ -26,7 +25,7 @@ console.log('data '+data)
 
 
 export default connect(function(state){
-  return {data: state.clublist }
+  return {data: state.clublist.data }
 })(ListBars);
 
 
