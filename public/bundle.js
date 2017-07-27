@@ -10044,7 +10044,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-console.log('store state ' + __WEBPACK_IMPORTED_MODULE_4__store__["a" /* default */].getState());
 
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
   __WEBPACK_IMPORTED_MODULE_3_react_redux__["a" /* Provider */],
@@ -28403,8 +28402,6 @@ module.exports = function spread(callback) {
 
 
 var store = Object(__WEBPACK_IMPORTED_MODULE_0_redux__["b" /* createStore */])(__WEBPACK_IMPORTED_MODULE_1__reducers_clublist__["a" /* default */]);
-
-console.log(store.getState());
 
 /* harmony default export */ __webpack_exports__["a"] = (store);
 
