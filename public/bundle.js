@@ -28412,6 +28412,14 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 var searchReducer = (state = { data: [] }, action) => {
   switch (action.type) {
     case __WEBPACK_IMPORTED_MODULE_0__components_action__["a" /* SEARCH */]:
+
+      if (action.error) {
+        return _extends({}, state, {
+          data: [],
+          loading: false,
+          error: true
+        });
+      }
       return _extends({}, state, {
         data: action.payload.data, //res.json(businesses)
         loading: false,
