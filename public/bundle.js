@@ -28448,6 +28448,10 @@ var searchReducer = (state = defaultState, action) => {
 
 
 
+var mapStateToProps = state => ({
+  data: state.clubList.data
+});
+
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
@@ -28480,9 +28484,8 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
-  return { data: state.data };
-})(ListBars));
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(mapStateToProps)(ListBars)); //new REDUX syntax
+
 
 /*
 <Container className="club-list">
