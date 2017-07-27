@@ -28414,7 +28414,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 var defaultState = { data: [] };
 
-var searchReducer = (state = defaultState, action) => {
+/* harmony default export */ __webpack_exports__["a"] = ((state = defaultState, action) => {
   switch (action.type) {
     case __WEBPACK_IMPORTED_MODULE_0__components_action__["a" /* SEARCH */]:
 
@@ -28434,9 +28434,7 @@ var searchReducer = (state = defaultState, action) => {
       return state;
 
   }
-};
-
-/* harmony default export */ __webpack_exports__["a"] = (searchReducer);
+});
 
 /***/ }),
 /* 280 */

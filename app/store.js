@@ -1,8 +1,8 @@
 import { createStore, combineReducers } from 'redux';
 
-import searchReducer from './reducers/clublist';
+import clublist from './reducers/clublist';
 
-var store = createStore(searchReducer);
+var store = createStore(clublist);
 
 
 export default store;

@@ -4,7 +4,7 @@ import { SEARCH} from "../components/action";
 var defaultState = {  data: []};
 
 
-var searchReducer = (state = defaultState, action) => {
+export default (state = defaultState, action) => {
 switch (action.type) {
     case SEARCH:
 
@@ -28,5 +28,5 @@ switch (action.type) {
   }
 }
 
-export default searchReducer;
+
 
