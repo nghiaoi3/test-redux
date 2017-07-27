@@ -47,29 +47,8 @@ client.search({
           sort: 1
 }).then(response => {
   console.log(response.jsonBody.businesses[0].name);
-}).catch(e => {
-  console.log(e);
-});
-
-
-/*
-  yelp
-    .accessToken(
-      process.env.YELPFUSION_CLIENTID,
-      process.env.YELPFUSION_CLIENTSECRET
-    )
-    .then(response => {
-      var client = yelp.client(response.jsonBody.access_token);
-      
-      client
-        .search({
-          term: "clubs",
-          location: req.body.searchText,
-          category_filter: "bars",
-          sort: 1
-        })
-        .then(async response => {
-          var businesses = response.jsonBody.businesses.map(b => {
+  
+  var businesses = response.jsonBody.businesses.map(b => {
             return {
               yelpId: b.id,
               name: b.name,
@@ -77,10 +56,14 @@ client.search({
               noReservations: null
             };
           });
+     return res.json(businesses);
 
-                    return res.json(businesses);
-        })
-    }) */
+}).catch(e => {
+  console.log(e);
+});
+
+
+
     
     });
 });
