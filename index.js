@@ -47,7 +47,7 @@ client.search({
           sort: 1
 }).then(response => {
   console.log(response.jsonBody.businesses[0].name);
-  /*
+  
   var businesses = response.jsonBody.businesses.map(b => {
             return {
               yelpId: b.id,
@@ -56,9 +56,10 @@ client.search({
               noReservations: null
             };
           });
-          */
+          
+            console.log('bsnes '+businesses);
 
-     return res.json(response.jsonBody.businesses[0]);
+     return res.json(businesses);
 
 }).catch(e => {
   console.log(e);
