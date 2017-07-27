@@ -1,7 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
-import { SEARCH} from "../components/action";
+import { SEARCH } from "../components/action";
+import { ListBars } from "../components/ListBars";
 
 
 class Main extends React.Component {
@@ -26,12 +27,16 @@ constructor(props){
   render() {
 
          return (
+           <div>
       <form onSubmit={this.handleSubmit.bind(this)}>
       <p>nghia oi</p>
         <input type="text" placeholder="Enter your search" ref="input"/>
         <br/><br/>
         <button>Search</button>
       </form>
+      <ListBars/>
+                 </div>
+
     )
   }
       

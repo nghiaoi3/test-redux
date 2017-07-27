@@ -25208,6 +25208,8 @@ const SEARCH = "SEARCH";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios__ = __webpack_require__(259);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_axios__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_action__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_ListBars__ = __webpack_require__(280);
+
 
 
 
@@ -25234,21 +25236,26 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "form",
-      { onSubmit: this.handleSubmit.bind(this) },
+      "div",
+      null,
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "p",
-        null,
-        "nghia oi"
+        "form",
+        { onSubmit: this.handleSubmit.bind(this) },
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "p",
+          null,
+          "nghia oi"
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", placeholder: "Enter your search", ref: "input" }),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "button",
+          null,
+          "Search"
+        )
       ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", placeholder: "Enter your search", ref: "input" }),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "button",
-        null,
-        "Search"
-      )
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_ListBars__["ListBars"], null)
     );
   }
 
@@ -28417,6 +28424,81 @@ var searchReducer = (state = { data: [] }, action) => {
 };
 
 /* harmony default export */ __webpack_exports__["a"] = (searchReducer);
+
+/***/ }),
+/* 280 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(200);
+
+
+
+var TableRow = ({ row }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+  "tr",
+  null,
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "td",
+    { key: row.name },
+    row.name
+  ),
+  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+    "td",
+    { key: row.address },
+    row.address
+  )
+);
+
+var data = this.props.data;
+
+class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
+  render() {
+
+    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+      "table",
+      null,
+      "    ",
+      data.map(club => {
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TableRow, { key: club.yelpId, row: club });
+      })
+    );
+  }
+}
+
+ListBars = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])()(ListBars);
+/* unused harmony default export */ var _unused_webpack_default_export = (ListBars);
+
+/*
+<Container className="club-list">
+<Table unstackable singleLine selectable style={{ marginTop: "20px" }}>
+  <Table.Header>
+    <Table.Row>
+      <Table.HeaderCell width={2}>No Reservations</Table.HeaderCell>
+      <Table.HeaderCell width={7}>Club Name</Table.HeaderCell>
+      <Table.HeaderCell width={7}>Address</Table.HeaderCell>
+    </Table.Row>
+  </Table.Header>
+   <Table.Body className="hover-pointer">
+    {this.props.data.map(club => {
+      console.log("club", club);
+      return (
+        <Table.Row
+          key={club.yelpId}
+          onClick={this.handleClickClub(club.yelpId)}
+        >
+          <Table.Cell>{club.noReservations}</Table.Cell>
+          <Table.Cell>
+            {club.name}
+          </Table.Cell>
+          <Table.Cell>{club.address}</Table.Cell>
+        </Table.Row>
+      );
+    })}
+   </Table.Body>
+</Table>
+</Container> */
 
 /***/ })
 /******/ ]);
