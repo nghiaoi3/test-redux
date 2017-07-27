@@ -46,17 +46,17 @@ client.search({
           category_filter: "bars",
           sort: 1
 }).then(async response => {
-          var businesses = response.jsonBody.businesses.map(b => {
+              var businesses = response.jsonBody.businesses.map(b => {
             return {
               yelpId: b.id,
               name: b.name,
               address: b.location.address1,
+              noReservations: null
             };
           });
-
           return res.json(businesses);
-        }).        catch(e => {
-  console.log(e);
+        })
+        .  catch(e => { console.log(e);
 });
 
 
