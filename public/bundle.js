@@ -28452,6 +28452,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
 
     var { data } = this.props;
+    data.businesses = [];
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "table",
