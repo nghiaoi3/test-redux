@@ -5,8 +5,9 @@ import { SEARCH} from "../components/action";
 
 export default  (state = {  data: []}, action) => {
 switch (action.type) {
+  
+      
     case SEARCH:
-console.log('ac '+action.payload.data)
       if (action.error) {
         return {
           ...state,

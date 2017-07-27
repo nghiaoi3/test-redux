@@ -9,9 +9,7 @@ class ListBars extends React.Component {
     
     
 var {data} = this.props;
-   if (data.businesses.length === 0) {
-      return <div/>;
-    }
+  data.businesses =[];
     return (   <table>   {data.businesses.map(business => {
   <tr>
     <td key={business.name}>{business.name}</td>

@@ -28414,8 +28414,8 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 /* harmony default export */ __webpack_exports__["a"] = ((state = { data: [] }, action) => {
   switch (action.type) {
+
     case __WEBPACK_IMPORTED_MODULE_0__components_action__["a" /* SEARCH */]:
-      console.log('ac ' + action.payload.data);
       if (action.error) {
         return _extends({}, state, {
           data: [],
@@ -28450,9 +28450,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
 
     var { data } = this.props;
-    if (data.businesses.length === 0) {
-      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null);
-    }
+    data.businesses = [];
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "table",
       null,
