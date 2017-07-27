@@ -25230,20 +25230,16 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   yelpSearch(searchText) {
     var { dispatch } = this.props;
 
-    /*
-    dispatch(
-      { type: SEARCH,
-      payload: axios.post("/api/yelp", { searchText }) 
-      //res.json(businesses)
-       });
-       
-       */
-
-    return dispatch({
-      type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
-      payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText })
-
+    dispatch({ type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
+      payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText }) //res.json(businesses)
     });
+
+    /* 
+      return dispatch({
+    type: SEARCH,
+    payload: axios.post("/api/yelp", { searchText })
+       })
+    */
   }
 
   render() {
@@ -28460,11 +28456,14 @@ var searchReducer = (state = defaultState, action) => {
 
 
 
+var mapStateToProps = state => ({
+  data: state.businesses.data
+});
+
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
-    var { data } = this.props;
-    console.log('data is ' + data);
+    var data = this.props.data;
     if (data.length === 0) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null);
     }
@@ -28492,9 +28491,13 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
-  return { data: state.data };
-})(ListBars));
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(mapStateToProps)(ListBars));
+/*
+export default connect(function(state){
+  return {data: state.data}
+})(ListBars);
+
+*/
 
 /*
 <Container className="club-list">

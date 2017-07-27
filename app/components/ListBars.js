@@ -1,11 +1,16 @@
 import React from "react";
 import { connect } from "react-redux";
 
+
+var mapStateToProps = state => ({
+  data: state.businesses.data,
+});
+
+
 class ListBars extends React.Component {
     
   render() {
-var {data} = this.props;
-console.log('data is '+data)
+var data = this.props.data;
     if (data.length === 0) {
       return <div />;
     }
@@ -21,11 +26,14 @@ console.log('data is '+data)
   }
 }
 
+
+export default connect(mapStateToProps)(ListBars);
+/*
 export default connect(function(state){
   return {data: state.data}
 })(ListBars);
 
-
+*/
 
 
         /*

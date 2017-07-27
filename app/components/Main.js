@@ -19,21 +19,19 @@ constructor(props){
   yelpSearch (searchText) {
     var {dispatch} = this.props;
     
-    
-    /*
-    dispatch(
+      dispatch(
       { type: SEARCH,
-      payload: axios.post("/api/yelp", { searchText }) 
-      //res.json(businesses)
+      payload: axios.post("/api/yelp", { searchText })   //res.json(businesses)
        });
        
-       */
        
+      /* 
         return dispatch({
       type: SEARCH,
       payload: axios.post("/api/yelp", { searchText })
     
     })
+    */
   };
 
   render() {
