@@ -40,7 +40,7 @@ var token = yelp.accessToken(clientId, clientSecret).then(response => {
 var client = yelp.client(token);
 
 app.post("/api/yelp", function(req, res, next) {
-    
+    console.log(req.body.searchText)
 client.search({
           term: "clubs",
           location: req.body.searchText,
