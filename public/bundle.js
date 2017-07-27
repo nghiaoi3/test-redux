@@ -28412,9 +28412,7 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 
 
 
-var defaultState = { data: [] };
-
-/* harmony default export */ __webpack_exports__["a"] = ((state = defaultState, action) => {
+/* harmony default export */ __webpack_exports__["a"] = ((state = { data: [] }, action) => {
   switch (action.type) {
     case __WEBPACK_IMPORTED_MODULE_0__components_action__["a" /* SEARCH */]:
       console.log('ac ' + action.payload.data);
@@ -28480,7 +28478,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
-  return { data: state.clublist };
+  return { data: state.clublist.data };
 })(ListBars));
 
 /*

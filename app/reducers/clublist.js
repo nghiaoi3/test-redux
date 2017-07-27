@@ -1,10 +1,9 @@
 import { SEARCH} from "../components/action";
 
 
-var defaultState = {  data: []};
 
 
-export default  (state = defaultState, action) => {
+export default  (state = {  data: []}, action) => {
 switch (action.type) {
     case SEARCH:
 console.log('ac '+action.payload.data)
