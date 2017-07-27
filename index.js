@@ -55,12 +55,7 @@ client.search({
             };
           });
           return res.json(businesses);
-        })
-        .  catch(e => { console.log(e);
-});
+        })  
 
-
-
-    
-    });
-});
+})
+})
