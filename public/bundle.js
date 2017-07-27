@@ -10031,7 +10031,7 @@ module.exports = getHostComponentFromComposite;
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(87);
-(function webpackMissingModule() { throw new Error("Cannot find module \".app/index.js\""); }());
+(function webpackMissingModule() { throw new Error("Cannot find module \".app/nghia.js\""); }());
 (function webpackMissingModule() { throw new Error("Cannot find module \".public/bundle.js\""); }());
 
 

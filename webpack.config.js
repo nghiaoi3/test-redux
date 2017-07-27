@@ -1,6 +1,6 @@
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './app/nghia.js',
   output: {
     path: __dirname,
     filename: './public/bundle.js'
