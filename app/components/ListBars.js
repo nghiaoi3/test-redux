@@ -24,7 +24,7 @@ var {data} = this.props;
 
 
 export default connect(function(state){
-  return {data: state.clublist.data }
+  return {data: state.clublist }
 })(ListBars);
 
 

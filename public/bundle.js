@@ -28476,7 +28476,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
-  return { data: state.clublist.data };
+  return { data: state.clublist };
 })(ListBars));
 
 /*
