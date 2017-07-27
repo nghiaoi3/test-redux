@@ -8,13 +8,12 @@ class ListBars extends React.Component {
   render() {
     
 var {data} = this.props;
-    data.businesses = [];
 
-    return (   <table>   {data.businesses.map(business => {
+    return (   <table>   
   <tr>
-    <td key={business.name}>{business.name}</td>
-    <td key={business.address}>{business.address}</td>
-  </tr>    })}
+    <td key={data.name}>{data.name}</td>
+    <td key={data.id}>{data.id}</td>
+  </tr>    
   </table>
 
 );
