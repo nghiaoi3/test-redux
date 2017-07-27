@@ -25214,19 +25214,22 @@ const SEARCH = "SEARCH";
 
 
 class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-  constructor(...args) {
-    var _temp;
+  constructor(props) {
+    super(props);
+  }
 
-    return _temp = super(...args), this.handleSubmit = event => {
-      event.preventDefault();
-      console.log('input.value is ', this.refs.input.value);
-      this.yelpSearch(this.refs.input.value);
-    }, this.yelpSearch = searchText => {
-      return this.props.dispatch({
-        type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
-        payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText })
-      });
-    }, _temp;
+  handleSubmit(event) {
+
+    event.preventDefault();
+    console.log('input.value is ', this.refs.input.value);
+    this.yelpSearch(this.refs.input.value);
+  }
+
+  yelpSearch(searchText) {
+    var { dispatch } = this.props;
+    dispatch({ type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
+      payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText })
+    });
   }
 
   render() {

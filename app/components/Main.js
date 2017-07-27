@@ -5,16 +5,21 @@ import { SEARCH} from "../components/action";
 
 
 class Main extends React.Component {
-
-  handleSubmit = event => {
-    event.preventDefault();
+constructor(props){
+    super(props);
+  }
+  
+  handleSubmit (event) {
+    
+        event.preventDefault();
     console.log('input.value is ', this.refs.input.value);
     this.yelpSearch(this.refs.input.value);
   };
 
-  yelpSearch = searchText => {
-    return this.props.dispatch({
-      type: SEARCH,
+  yelpSearch (searchText) {
+    var {dispatch} = this.props;
+    dispatch(
+      { type: SEARCH,
       payload: axios.post("/api/yelp", { searchText })
        });
   };
