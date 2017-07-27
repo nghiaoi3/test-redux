@@ -1,6 +1,10 @@
 import { SEARCH} from "../components/action";
 
-var searchReducer = (state = {data: []}, action) => {
+
+var defaultState = {  data: []};
+
+
+var searchReducer = (state = defaultState, action) => {
 switch (action.type) {
     case SEARCH:
 
@@ -13,13 +17,11 @@ switch (action.type) {
         };
       }
       
-            console.log( 'action data '+action.payload.data)
 
 
           return {
         ...state,
         data: action.payload.data, //res.json(businesses)
-        
         loading: false,
         error: false
       };
