@@ -8,7 +8,6 @@ import store from './store';
 ReactDOM.render(
   
   <Provider store={store}>
-    <p>NGhia</p>,  
     <Main/>
   </Provider>,
   document.getElementById('root')
