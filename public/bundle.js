@@ -28421,8 +28421,12 @@ var searchReducer = (state = { data: [] }, action) => {
           error: true
         });
       }
+
+      console.log('action data ' + action.payload.data);
+
       return _extends({}, state, {
         data: action.payload.data, //res.json(businesses)
+
         loading: false,
         error: false
       });

@@ -12,9 +12,14 @@ switch (action.type) {
           error: true
         };
       }
+      
+            console.log( 'action data '+action.payload.data)
+
+
           return {
         ...state,
         data: action.payload.data, //res.json(businesses)
+        
         loading: false,
         error: false
       };
