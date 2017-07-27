@@ -6,10 +6,7 @@ import  ListBars  from "./ListBars.js";
 
 
 class Main extends React.Component {
-constructor(props){
-    super(props);
-  }
-  
+
   handleSubmit (event) {
         event.preventDefault();
     console.log('input.value is ', this.refs.input.value);
@@ -39,7 +36,7 @@ constructor(props){
          return (
            <div>
       <form onSubmit={this.handleSubmit.bind(this)}>
-      <p>YELP's BARs</p>
+      <p>YELP</p>
         <input type="text" placeholder="Enter your search" ref="input"/>
         <br/><br/>
         <button>Search</button>

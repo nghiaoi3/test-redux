@@ -25216,9 +25216,6 @@ const SEARCH = "SEARCH";
 
 
 class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleSubmit(event) {
     event.preventDefault();
@@ -25252,7 +25249,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "p",
           null,
-          "YELP's BARs"
+          "YELP"
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", placeholder: "Enter your search", ref: "input" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
