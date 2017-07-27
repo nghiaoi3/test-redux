@@ -25193,15 +25193,9 @@ module.exports = Cancel;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export search */
-
-const SEARCH = 'SEARCH';
+const SEARCH = "SEARCH";
 /* harmony export (immutable) */ __webpack_exports__["a"] = SEARCH;
 
-
-function search() {
-  return { type: 'SEARCH' };
-}
 
 /***/ }),
 /* 220 */
