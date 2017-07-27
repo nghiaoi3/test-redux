@@ -28451,11 +28451,9 @@ var TableRow = ({ row }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.create
   )
 );
 
-var data = this.props.data;
-
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
-
+    var data = this.props.data;
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "table",
       null,

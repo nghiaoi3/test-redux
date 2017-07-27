@@ -9,11 +9,10 @@ var TableRow = ({row}) => (
   </tr>
 )
 
-var data = this.props.data;
 
 class ListBars extends React.Component {
   render() {
-
+var data = this.props.data;
     return (   <table>    {data.map(club => {
       <TableRow key={club.yelpId} row={club} />
     })}
