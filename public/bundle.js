@@ -25225,8 +25225,8 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
     return _temp = super(...args), this.handleSubmit = event => {
       event.preventDefault();
-      console.log('input.value is ', this.input.value);
-      this.yelpSearch(this.input.value);
+      console.log('input.value is ', this.refs.input.value);
+      this.yelpSearch(this.refs.input.value);
     }, this.yelpSearch = searchText => {
       return this.props.dispatch({
         type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
