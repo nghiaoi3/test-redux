@@ -8,7 +8,7 @@ class Main extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    // console.log('input.value', this.input.value);
+    console.log('input.value is ', this.input.value);
     this.yelpSearch(this.input.value);
   };
 
