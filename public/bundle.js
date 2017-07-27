@@ -34545,6 +34545,11 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "form",
       { onSubmit: this.handleSubmit.bind(this) },
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+        "p",
+        null,
+        "nghia oi"
+      ),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", placeholder: "Enter your search", ref: "input" }),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
       __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),

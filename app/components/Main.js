@@ -23,6 +23,7 @@ class Main extends React.Component {
 
          return (
       <form onSubmit={this.handleSubmit.bind(this)}>
+      <p>nghia oi</p>
         <input type="text" placeholder="Enter your search" ref="input"/>
         <br/><br/>
         <button>Search</button>
