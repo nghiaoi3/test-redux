@@ -3,7 +3,7 @@ import { SEARCH} from "../components/action";
 var searchReducer = (state = {data: []}, action) => {
 switch (action.type) {
     case SEARCH:
-      
+
       if (action.error) {
         return {
           ...state,
