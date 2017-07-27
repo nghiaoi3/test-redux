@@ -2,16 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 
 
-var mapStateToProps = state => ({
-  data: state.data,
-});
-
 
 class ListBars extends React.Component {
         
   render() {
     
-var data = this.props.data;
+var {data} = this.props;
     
     return (   <table>    {data.businesses.map(business => {
   <tr>
@@ -26,13 +22,12 @@ var data = this.props.data;
 }
 
 
-export default connect(mapStateToProps)(ListBars);
-/*
+
 export default connect(function(state){
   return {data: state.data}
 })(ListBars);
 
-*/
+
 
 
         /*
