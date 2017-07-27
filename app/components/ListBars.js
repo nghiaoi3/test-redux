@@ -2,10 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 
 class ListBars extends React.Component {
-    constructor(props){
-    super(props);
-  }
-  
+    
   render() {
 var {data} = this.props;
 
@@ -24,8 +21,9 @@ var {data} = this.props;
   }
 }
 
-ListBars = connect()(ListBars)
-export default ListBars;
+export default connect(function(state){
+  return {data: state.data}
+})(ListBars);
 
 
 

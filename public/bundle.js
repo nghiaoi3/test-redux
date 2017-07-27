@@ -28437,9 +28437,6 @@ var searchReducer = (state = { data: [] }, action) => {
 
 
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     var { data } = this.props;
@@ -28471,8 +28468,9 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-ListBars = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])()(ListBars);
-/* harmony default export */ __webpack_exports__["a"] = (ListBars);
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
+  return { data: state.data };
+})(ListBars));
 
 /*
 <Container className="club-list">
