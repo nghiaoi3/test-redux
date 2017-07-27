@@ -9,6 +9,9 @@ class ListBars extends React.Component {
     
     
 var {data} = this.props;
+console.log('data '+data)
+
+/*
     return (   <table>   {data.businesses.map(business => {
   <tr>
     <td key={business.name}>{business.name}</td>
@@ -16,7 +19,7 @@ var {data} = this.props;
   </tr>    })}
   </table>
 
-);
+);*/
 
   }
 }

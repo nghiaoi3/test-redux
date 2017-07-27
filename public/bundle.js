@@ -28450,27 +28450,17 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
 
     var { data } = this.props;
-    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-      "table",
-      null,
-      "   ",
-      data.businesses.map(business => {
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "tr",
-          null,
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "td",
-            { key: business.name },
-            business.name
-          ),
-          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            "td",
-            { key: business.address },
-            business.address
-          )
-        );
-      })
-    );
+    console.log('data ' + data);
+
+    /*
+        return (   <table>   {data.businesses.map(business => {
+      <tr>
+        <td key={business.name}>{business.name}</td>
+        <td key={business.address}>{business.address}</td>
+      </tr>    })}
+      </table>
+    
+    );*/
   }
 }
 
