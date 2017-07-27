@@ -10,7 +10,6 @@ constructor(props){
   }
   
   handleSubmit (event) {
-    
         event.preventDefault();
     console.log('input.value is ', this.refs.input.value);
     this.yelpSearch(this.refs.input.value);

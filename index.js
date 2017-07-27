@@ -1,12 +1,20 @@
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser')
+
 app.set('view engine', 'ejs');
 app.set('views', './views');
 app.use(express.static('public'));
 
 
-app.get('/', (req, res) => res.render('home'));
 
+// create application/json parser
+var jsonParser = bodyParser.json()
+// create application/x-www-form-urlencoded parser
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+
+app.get('/', (req, res) => res.render('home'));
 
 
 //create a server
@@ -30,7 +38,6 @@ var token = yelp.accessToken(clientId, clientSecret).then(response => {
 });
 
 var client = yelp.client(token);
-
 
 app.post("/api/yelp", function(req, res, next) {
     
