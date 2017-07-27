@@ -28432,7 +28432,10 @@ var searchReducer = (state = { data: [] }, action) => {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(87);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_redux__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_redux__ = __webpack_require__(200);
+
 
 
 
@@ -28467,7 +28470,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-ListBars = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])()(ListBars);
+ListBars = Object(__WEBPACK_IMPORTED_MODULE_2_react_redux__["b" /* connect */])()(ListBars);
 /* unused harmony default export */ var _unused_webpack_default_export = (ListBars);
 
 /*
