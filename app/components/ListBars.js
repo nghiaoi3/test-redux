@@ -1,12 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 
-
-var mapStateToProps = state => ({
-  data: state.clubList.data,
-});
-
-
 class ListBars extends React.Component {
     
   render() {
@@ -27,7 +21,11 @@ console.log('data is '+data)
   }
 }
 
-export default connect(mapStateToProps)(ListBars); //new REDUX syntax
+export default connect(function(state){
+  return {data: state.data}
+})(ListBars);
+
+
 
 
         /*

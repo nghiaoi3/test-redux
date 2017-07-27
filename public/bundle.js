@@ -25229,8 +25229,20 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   yelpSearch(searchText) {
     var { dispatch } = this.props;
-    dispatch({ type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
-      payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText }) //res.json(businesses)
+
+    /*
+    dispatch(
+      { type: SEARCH,
+      payload: axios.post("/api/yelp", { searchText }) 
+      //res.json(businesses)
+       });
+       
+       */
+
+    return dispatch({
+      type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
+      payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText })
+
     });
   }
 
@@ -28448,10 +28460,6 @@ var searchReducer = (state = defaultState, action) => {
 
 
 
-var mapStateToProps = state => ({
-  data: state.clubList.data
-});
-
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 
   render() {
@@ -28484,8 +28492,9 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(mapStateToProps)(ListBars)); //new REDUX syntax
-
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
+  return { data: state.data };
+})(ListBars));
 
 /*
 <Container className="club-list">
