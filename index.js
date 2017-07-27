@@ -45,7 +45,7 @@ client.search({
           location: req.body.searchText,
           category_filter: "bars",
           sort: 1
-}).then(response => {
+}).then(async response => {
   console.log(response.jsonBody.businesses[0].name);
   
   var businesses = response.jsonBody.businesses.map(b => {
@@ -53,7 +53,6 @@ client.search({
               yelpId: b.id,
               name: b.name,
               address: b.location.address1,
-              noReservations: null
             };
           });
           
