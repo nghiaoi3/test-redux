@@ -8,10 +8,7 @@ app.use(express.static('public'));
 
 
 
-// create application/json parser
-var jsonParser = bodyParser.json()
-// create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false })
+app.use(bodyParser()); // get information from html forms
 
 
 app.get('/', (req, res) => res.render('home'));
