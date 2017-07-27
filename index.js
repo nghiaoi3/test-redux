@@ -56,6 +56,9 @@ client.search({
               noReservations: null
             };
           });
+          
+            console.log('bsnes '+businesses);
+
      return res.json(businesses);
 
 }).catch(e => {
