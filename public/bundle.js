@@ -28457,7 +28457,7 @@ var searchReducer = (state = defaultState, action) => {
 
 
 var mapStateToProps = state => ({
-  data: state.businesses.data
+  data: state.data.businesses
 });
 
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
