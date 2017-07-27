@@ -28456,20 +28456,23 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
       "table",
       null,
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        "tr",
-        null,
+      "   ",
+      data.businesses.map(business => {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "td",
-          { key: data.name },
-          data.name
-        ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-          "td",
-          { key: data.id },
-          data.id
-        )
-      )
+          "tr",
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "td",
+            { key: business.name },
+            business.name
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "td",
+            { key: business.address },
+            business.address
+          )
+        );
+      })
     );
   }
 }

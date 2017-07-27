@@ -9,11 +9,11 @@ class ListBars extends React.Component {
     
 var {data} = this.props;
 
-    return (   <table>   
+    return (   <table>   {data.businesses.map(business => {
   <tr>
-    <td key={data.name}>{data.name}</td>
-    <td key={data.id}>{data.id}</td>
-  </tr>    
+    <td key={business.name}>{business.name}</td>
+    <td key={business.address}>{business.address}</td>
+  </tr>    })}
   </table>
 
 );
