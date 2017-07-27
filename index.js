@@ -28,16 +28,16 @@ var yelp = require("yelp-fusion");
 var clientId = 'mKWOFInN79IrX4VnAdhDBQ';
 var clientSecret = '9fu7loKPMRa28nRqTWxAAyMISbw9tweFdkuwKQyFtBaSyG1fq5o7qW9hy7ad2CoQ';
 
-var token = yelp.accessToken(clientId, clientSecret).then(response => {
-  console.log(response.jsonBody.access_token);
-}).catch(e => {
-  console.log(e);
-});
-
-var client = yelp.client(token);
 
 app.post("/api/yelp", function(req, res) {
+        
     console.log('searchText '+req.body.searchText)
+
+yelp.accessToken(clientId, clientSecret).then(response => {
+    
+var client = yelp.client(response.jsonBody.access_token);
+
+
 client.search({
           term: "clubs",
           location: req.body.searchText,
@@ -80,5 +80,5 @@ client.search({
         })
     }) */
     
-    
+    });
 });
