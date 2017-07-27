@@ -28452,7 +28452,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   render() {
 
     var { data } = this.props;
-    if (this.props.data.length === 0) {
+    if (data.businesses.length === 0) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", null);
     }
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -28480,7 +28480,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
-  return { data: state.data };
+  return { data: state.clublist };
 })(ListBars));
 
 /*

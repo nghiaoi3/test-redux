@@ -9,8 +9,8 @@ class ListBars extends React.Component {
     
     
 var {data} = this.props;
-   if (this.props.data.length === 0) {
-      return <div />;
+   if (data.businesses.length === 0) {
+      return <div/>;
     }
     return (   <table>   {data.businesses.map(business => {
   <tr>
@@ -26,7 +26,7 @@ var {data} = this.props;
 
 
 export default connect(function(state){
-  return {data: state.data}
+  return {data: state.clublist }
 })(ListBars);
 
 
