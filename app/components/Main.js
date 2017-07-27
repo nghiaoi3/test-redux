@@ -20,7 +20,7 @@ constructor(props){
     var {dispatch} = this.props;
     dispatch(
       { type: SEARCH,
-      payload: axios.post("/api/yelp", { searchText })
+      payload: axios.post("/api/yelp", { searchText }) //res.json(businesses)
        });
   };
 
@@ -29,7 +29,7 @@ constructor(props){
          return (
            <div>
       <form onSubmit={this.handleSubmit.bind(this)}>
-      <p>nghia oi</p>
+      <p>YELP's BARs</p>
         <input type="text" placeholder="Enter your search" ref="input"/>
         <br/><br/>
         <button>Search</button>

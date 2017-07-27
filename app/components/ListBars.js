@@ -9,10 +9,10 @@ console.log('data is '+data)
     if (data.length === 0) {
       return <div />;
     }
-    return (   <table>    {data.map(club => {
+    return (   <table>    {data.map(business => {
   <tr>
-    <td key={club.name}>{club.name}</td>
-    <td key={club.address}>{club.address}</td>
+    <td key={business.name}>{business.name}</td>
+    <td key={business.address}>{business.address}</td>
   </tr>    })}
   </table>
 

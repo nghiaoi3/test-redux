@@ -25229,7 +25229,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   yelpSearch(searchText) {
     var { dispatch } = this.props;
     dispatch({ type: __WEBPACK_IMPORTED_MODULE_3__components_action__["a" /* SEARCH */],
-      payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText })
+      payload: __WEBPACK_IMPORTED_MODULE_2_axios___default.a.post("/api/yelp", { searchText }) //res.json(businesses)
     });
   }
 
@@ -25244,7 +25244,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "p",
           null,
-          "nghia oi"
+          "YELP's BARs"
         ),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", placeholder: "Enter your search", ref: "input" }),
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
@@ -28413,7 +28413,7 @@ var searchReducer = (state = { data: [] }, action) => {
   switch (action.type) {
     case __WEBPACK_IMPORTED_MODULE_0__components_action__["a" /* SEARCH */]:
       return _extends({}, state, {
-        data: action.payload.data,
+        data: action.payload.data, //res.json(businesses)
         loading: false,
         error: false
       });
@@ -28448,19 +28448,19 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       "table",
       null,
       "    ",
-      data.map(club => {
+      data.map(business => {
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           "tr",
           null,
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "td",
-            { key: club.name },
-            club.name
+            { key: business.name },
+            business.name
           ),
           __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             "td",
-            { key: club.address },
-            club.address
+            { key: business.address },
+            business.address
           )
         );
       })

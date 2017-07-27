@@ -5,7 +5,7 @@ switch (action.type) {
     case SEARCH:
           return {
         ...state,
-        data: action.payload.data,
+        data: action.payload.data, //res.json(businesses)
         loading: false,
         error: false
       };
