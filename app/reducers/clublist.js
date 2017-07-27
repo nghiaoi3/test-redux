@@ -7,7 +7,7 @@ var defaultState = {  data: []};
 export default  (state = defaultState, action) => {
 switch (action.type) {
     case SEARCH:
-
+console.log('ac '+action.payload.data)
       if (action.error) {
         return {
           ...state,

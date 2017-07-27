@@ -28417,7 +28417,7 @@ var defaultState = { data: [] };
 /* harmony default export */ __webpack_exports__["a"] = ((state = defaultState, action) => {
   switch (action.type) {
     case __WEBPACK_IMPORTED_MODULE_0__components_action__["a" /* SEARCH */]:
-
+      console.log('ac ' + action.payload.data);
       if (action.error) {
         return _extends({}, state, {
           data: [],
