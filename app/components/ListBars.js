@@ -1,16 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
 
-
-var TableRow = ({row}) => (
-  <tr>
-    <td key={row.name}>{row.name}</td>
-    <td key={row.address}>{row.address}</td>
-  </tr>
-)
-
-
-
 class ListBars extends React.Component {
     constructor(props){
     super(props);
@@ -19,8 +9,10 @@ class ListBars extends React.Component {
   render() {
 var {data} = this.props;
     return (   <table>    {data.map(club => {
-      <TableRow key={club.yelpId} row={club} />
-    })}
+  <tr>
+    <td key={club.name}>{club.name}</td>
+    <td key={club.address}>{club.address}</td>
+  </tr>    })}
   </table>
 
 );

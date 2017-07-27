@@ -28436,21 +28436,6 @@ var searchReducer = (state = { data: [] }, action) => {
 
 
 
-var TableRow = ({ row }) => __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-  "tr",
-  null,
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "td",
-    { key: row.name },
-    row.name
-  ),
-  __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-    "td",
-    { key: row.address },
-    row.address
-  )
-);
-
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   constructor(props) {
     super(props);
@@ -28463,7 +28448,20 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
       null,
       "    ",
       data.map(club => {
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TableRow, { key: club.yelpId, row: club });
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          "tr",
+          null,
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "td",
+            { key: club.name },
+            club.name
+          ),
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            "td",
+            { key: club.address },
+            club.address
+          )
+        );
       })
     );
   }
