@@ -25259,8 +25259,7 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           null,
           "Search"
         )
-      ),
-      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__ListBars_js__["a" /* default */], null)
+      )
     );
   }
 
@@ -28464,7 +28463,7 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
+/* unused harmony default export */ var _unused_webpack_default_export = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(function (state) {
   return { data: state.clublist.data };
 })(ListBars));
 
