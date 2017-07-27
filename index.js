@@ -35,6 +35,8 @@ app.post("/api/yelp", function(req, res) {
 
 yelp.accessToken(clientId, clientSecret).then(response => {
     
+console.log('token is ' +response.jsonBody.access_token);
+
 var client = yelp.client(response.jsonBody.access_token);
 
 
