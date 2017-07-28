@@ -5,6 +5,22 @@ import { SEARCH } from "../components/action";
 import  ListBars  from "./ListBars.js";
 
 
+/*var fetch = require('node-fetch');
+
+/*var async = require('asyncawait/async');
+var await = require('asyncawait/await');*/ //async await is UPDATED on Node 8 
+
+
+ /*
+ 
+async (function searching() {
+    await fetch('https://evening-sea-56898.herokuapp.com/api/yelp')
+    .then(function(res) {
+        return res.json();})
+})*/
+
+
+
 class Main extends React.Component {
 
   handleSubmit (event) {
@@ -16,19 +32,10 @@ class Main extends React.Component {
   yelpSearch (searchText) {
     var {dispatch} = this.props;
     
-      dispatch(
-      { type: SEARCH,
-      payload: axios.post("/api/yelp", { searchText })   //res.json(businesses)
+      dispatch(      { type: SEARCH,    
+      payload:axios.post('/api/yelp',{searchText}) //res.json(businesses)
        });
-       
-       
-      /* 
-        return dispatch({
-      type: SEARCH,
-      payload: axios.post("/api/yelp", { searchText })
     
-    })
-    */
   };
 
   render() {

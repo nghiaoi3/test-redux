@@ -1,13 +1,23 @@
-import { SEARCH} from "../components/action";
+/*import {combineReducers} from 'redux';
+
+
+function loading(state = {  loading: false}, action) {
+  switch (action.type) {
+    case 'FETCH_SITES_REQUEST':
+      return true;
+    case 'FETCH_SITES_ERROR':
+      return false;
+    default:
+      return state;
+  }
+}*/
 
 
 
-
-export default  (state = {  data: []}, action) => {
+export default  (state = {  data: []}, action)=>  {
 switch (action.type) {
   
-      
-    case SEARCH:
+      case 'SEARCH':
       if (action.error) {
         return {
           ...state,
@@ -18,15 +28,21 @@ switch (action.type) {
       }
           return {
         ...state,
-        data: action.payload.data, //res.json(businesses)
+        data: action.payload.data, 
         loading: false,
         error: false
       };
+      
+      
     default:
       return state;
 
   }
 }
 
-
-
+/*
+export default combineReducers({
+  list,
+  loading
+});
+*/
