@@ -54,7 +54,10 @@ client.search({
               noReservations: null
             };
           });
+          var result = businesses
+          console.log(businesses)
           return res.json(businesses);
+          
         })  
 
 })
