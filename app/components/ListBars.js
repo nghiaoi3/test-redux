@@ -3,8 +3,8 @@ import { connect } from "react-redux";
 
 
 var mapStateToProps = state => ({
-  data: state.clubList.data,
-  loading: state.clubList.loading,
+  data: state.clublist.data,
+  loading: state.clublist.loading,
 });
 
 
@@ -29,7 +29,8 @@ console.log('data of List '+data)
   }
 }
 
-export default connect(mapStateToProps)(ListBars);
+ListBars = connect()(ListBars)
+export default ListBars;
 
 
 

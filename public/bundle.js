@@ -26500,7 +26500,8 @@ class Main extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
           null,
           "Search"
         )
-      )
+      ),
+      __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("listBars", null)
     );
   }
 
@@ -30820,8 +30821,8 @@ module.exports = function spread(callback) {
 
 
 var mapStateToProps = state => ({
-  data: state.clubList.data,
-  loading: state.clubList.loading
+  data: state.clublist.data,
+  loading: state.clublist.loading
 });
 
 class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
@@ -30855,7 +30856,8 @@ class ListBars extends __WEBPACK_IMPORTED_MODULE_0_react___default.a.Component {
   }
 }
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])(mapStateToProps)(ListBars));
+ListBars = Object(__WEBPACK_IMPORTED_MODULE_1_react_redux__["b" /* connect */])()(ListBars);
+/* unused harmony default export */ var _unused_webpack_default_export = (ListBars);
 
 /***/ })
 /******/ ]);
